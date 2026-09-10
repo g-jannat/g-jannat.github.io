@@ -4,7 +4,7 @@ import path from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/portfolio/", // GitHub Repository-র সঠিক পাথ যুক্ত করা হলো
+  base: "/", // GitHub Repository-র সঠিক পাথ যুক্ত করা হলো
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

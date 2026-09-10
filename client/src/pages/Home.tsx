@@ -36,7 +36,7 @@ const journalArticles = [
   {
     year: '2026',
     title: 'A Data Efficient Pyramid Vision Transformer for Image Classification',
-    venue: 'Discover Artificial Intelligence, vol. 6, art. no. 1104',
+    venue: 'Discover Artificial Intelligence, Springer, vol. 6, art. no. 1104',
     detail: 'Q1 · IF: 11.29',
     status: 'Published',
     doi: '10.1007/s44163-026-02100-7'

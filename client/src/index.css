@@ -246,6 +246,14 @@
   color: var(--primary);
 }
 
+/* Compact Field of Interest line: readable comma-separated academic focus areas without bullet clutter. */
+.field-interest-line {
+  max-width: 56rem;
+  color: var(--primary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 /* Academic Light Minimalism: IELTS scores become compact, scan-friendly bronze badges without adding visual noise. */
 .ielts-badge {
   display: inline-flex;
@@ -440,4 +448,225 @@ address {
 .nav-link.active-nav-link::after { width: 100%; }
 @media (max-width: 1023px) {
   .nav-link.active-nav-link::after { width: 0; }
+}
+
+/* Final compact pass: compress vertical rhythm across the full academic portfolio while preserving readable hierarchy. */
+main > section.section-boundary {
+  padding-top: 1rem;
+  padding-bottom: 1.35rem;
+}
+
+main > section:first-child .container {
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+}
+
+#field-of-interest {
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.employment-timeline {
+  gap: 1.25rem;
+}
+
+#publications .space-y-4 > :not([hidden]) ~ :not([hidden]),
+#projects-certifications .space-y-3 > :not([hidden]) ~ :not([hidden]),
+#projects-certifications .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.65rem;
+}
+
+#projects-certifications .list-hover,
+#teaching .list-hover {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+#teaching .grid.gap-6 {
+  gap: 1rem;
+}
+
+#skills .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.65rem;
+}
+
+#contact .contact-details .space-y-4 {
+  gap: 0.65rem;
+}
+
+@media (min-width: 768px) {
+  .section-heading { font-size: 1.95rem; }
+  #employment-history .section-heading,
+  #academic-background .section-heading { font-size: 1.8rem; }
+  #employment-history .entry-title,
+  #academic-background .entry-title { font-size: 0.95rem; }
+  #employment-history .employment-entry,
+  #academic-background .academic-entry { padding-left: 1.15rem; }
+}
+
+@media (max-width: 767px) {
+  main > section.section-boundary {
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+  }
+  main > section:first-child .container {
+    gap: 0.9rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.55rem;
+  }
+  #field-of-interest {
+    padding-top: 0.55rem;
+    padding-bottom: 0.75rem;
+  }
+  #employment-history .section-heading,
+  #academic-background .section-heading { font-size: 1.15rem; }
+  #employment-history .entry-title,
+  #academic-background .entry-title { font-size: 0.92rem; }
+}
+
+/* Heading consistency pass: every major and subsection heading shares one compact editorial scale. */
+.section-heading {
+  font-size: 1.8rem;
+  line-height: 1.12;
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+}
+
+/* Final alignment polish: keep every section title on a shared left anchor and every content column on a shared right anchor. */
+#employment-history .container,
+#academic-background .container,
+#publications .container,
+#projects-certifications .container,
+#teaching .container,
+#skills .container,
+#contact .container {
+  align-items: start;
+}
+
+#employment-history .container > div:first-child,
+#academic-background .container > div:first-child,
+#publications .container > div:first-child,
+#projects-certifications .container > div:first-child,
+#teaching .container > div:first-child,
+#skills .container > div:first-child,
+#contact .container > div:first-child {
+  align-self: start;
+}
+
+#employment-history .section-heading,
+#academic-background .section-heading,
+#publications .section-heading,
+#projects-certifications .section-heading,
+#teaching .section-heading,
+#skills .section-heading,
+#contact .section-heading {
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 2.75rem;
+  }
+}
+
+/* Certification rhythm: keep provider groups and certification names as compact as the Teaching Experience course rows. */
+#projects-certifications ul.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.25rem;
+}
+
+#projects-certifications .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.45rem;
+}
+
+#projects-certifications ul li.list-hover {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  line-height: 1.35;
+}
+
+#projects-certifications .provider-label {
+  margin-bottom: 0.1rem;
+}
+
+/* Consolidated two-file handoff pass: compact headings, stable hierarchy, and responsive spacing across phone, tablet, laptop, desktop, and wide displays. */
+.name-level,
+.section-heading {
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+#field-of-interest ul {
+  margin-top: 0.55rem;
+  gap: 0.4rem 1.25rem;
+  line-height: 1.4;
+}
+
+#teaching .list-hover {
+  gap: 1.1rem;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  line-height: 1.35;
+}
+
+#teaching .grid.gap-6 {
+  gap: 0.75rem;
+}
+
+#teaching .mb-4 {
+  margin-bottom: 0.55rem;
+}
+
+@media (min-width: 640px) {
+  .name-level,
+  .section-heading {
+    font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .name-level,
+  .section-heading {
+    font-size: 1.55rem;
+  }
+  #field-of-interest ul {
+    gap: 0.45rem 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .name-level,
+  .section-heading {
+    font-size: 1.6rem;
+  }
+  #field-of-interest ul {
+    gap: 0.5rem 1.75rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .name-level,
+  .section-heading {
+    font-size: 1.12rem;
+  }
+  #field-of-interest ul {
+    gap: 0.25rem 0.9rem;
+    line-height: 1.3;
+  }
+  #teaching .list-hover {
+    gap: 0.7rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
 }

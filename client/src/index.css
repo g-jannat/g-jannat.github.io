@@ -723,4 +723,1792 @@ main > section:first-child .container {
     font-size: 0.94rem !important;
     line-height: 1.32;
   }
+}/* Focused editorial spacing and cross-browser responsive overrides. */
+
+/* Keep the name and every visible section/subsection heading on one exact responsive scale. */
+.name-level,
+.section-heading {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.45rem !important;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+/* Field of Interest: use the same compact vertical rhythm as the course index. */
+#field-of-interest ul {
+  max-width: 32rem;
+  grid-template-columns: repeat(2, minmax(0, 14rem));
+  column-gap: 1.15rem;
+  row-gap: 0.2rem;
+  line-height: 1.35;
+}
+
+#field-of-interest li {
+  min-width: 0;
+}
+
+/* Projects and certifications: match the compact course-row rhythm. */
+#projects-certifications .grid.gap-4 {
+  gap: 1rem;
+}
+
+#projects-certifications .space-y-3 > :not([hidden]) ~ :not([hidden]),
+#projects-certifications .space-y-2 > :not([hidden]) ~ :not([hidden]),
+#projects-certifications .space-y-3 {
+  margin-top: 0.35rem;
+}
+
+#projects-certifications .space-y-2 {
+  row-gap: 0.3rem;
+}
+
+#projects-certifications ul li.list-hover {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  line-height: 1.35;
+}
+
+#projects-certifications .border-b.border-border\/70 {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+/* Technical skills: compact rows, chips, and IELTS badges. */
+#skills .mt-1 {
+  margin-top: 0;
+}
+
+#skills .mt-4 {
+  margin-top: 0.7rem;
+}
+
+#skills .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.7rem;
+}
+
+#skills .skill-chips {
+  gap: 0.3rem;
+}
+
+#skills .skill-chip {
+  min-height: 1.55rem;
+  padding: 0.16rem 0.45rem;
+  font-size: 0.78rem;
+}
+
+#skills .ielts-badge {
+  min-width: 3.2rem;
+  padding: 0.16rem 0.4rem;
+  font-size: 0.78rem;
+}
+
+#skills .ielts-badge-label {
+  font-size: 0.68rem;
+}
+
+#skills .provider-label {
+  margin-bottom: 0.35rem;
+}
+
+/* Contact: keep details close and aligned with the compact sections above. */
+#contact .contact-details {
+  gap: 1rem;
+  padding-top: 0;
+}
+
+#contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.8rem;
+}
+
+#contact .contact-details p.leading-7 {
+  line-height: 1.45;
+}
+
+#contact .contact-details .mt-2 {
+  margin-top: 0.7rem;
+}
+
+/* Edge-safe grid behavior: prevent long academic text from pushing columns apart. */
+.container,
+.container > *,
+.container > * > * {
+  min-width: 0;
+}
+
+.publication-item,
+.academic-entry,
+.employment-entry,
+.list-hover,
+.contact-details,
+.contact-details > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  #field-of-interest ul {
+    column-gap: 1.15rem;
+    row-gap: 0.2rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .name-level,
+  .section-heading {
+    font-size: 1.12rem !important;
+    line-height: 1.2;
+  }
+
+  #field-of-interest ul {
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.75rem;
+    row-gap: 0.15rem;
+  }
+
+  #skills .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.6rem;
+  }
+
+  #contact .contact-details {
+    gap: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list-hover:hover,
+  .publication-item:hover,
+  .academic-entry:hover,
+  .employment-entry:hover,
+  .skill-chip:hover,
+  .ielts-badge:hover {
+    transform: none;
+  }
+}
+/* Final Edge, header, and technical-skills refinement. */
+
+/* Prevent the sticky header from visually touching the first section in Edge. */
+html {
+  scroll-padding-top: 5.25rem;
+}
+
+header.sticky {
+  isolation: isolate;
+  min-height: 4.5rem;
+}
+
+header.sticky nav > div:first-child {
+  min-height: 4.5rem;
+}
+
+main#top {
+  scroll-margin-top: 5.25rem;
+}
+
+/* Keep the first content boundary visibly separated below the header. */
+main#top > section:first-child {
+  border-top: 0;
+  padding-top: 0.8rem;
+}
+
+/* Tighten the four technical-skill groups to the same compact rhythm as course rows. */
+#skills .mt-1.grid {
+  gap: 0.85rem;
+}
+
+#skills .mt-4 {
+  margin-top: 0.55rem;
+}
+
+#skills .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
+}
+
+#skills .skill-chips {
+  margin-top: 0.35rem;
+  gap: 0.25rem;
+}
+
+#skills .skill-language-block {
+  padding-bottom: 0;
+}
+
+#skills .skill-language-block .mt-2 {
+  margin-top: 0.35rem;
+}
+
+/* Compact contact links while keeping comfortable tap targets. */
+#contact .contact-details .mt-2.flex {
+  gap: 0.7rem 1rem;
+}
+
+/* Edge-safe navigation wrapping and section column sizing. */
+.nav-link {
+  white-space: normal;
+  text-align: center;
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  header.sticky nav > div:first-child {
+    gap: 1rem;
+  }
+
+  header.sticky nav > div:first-child > div.hidden {
+    gap: 1.1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    scroll-padding-top: 4.75rem;
+  }
+
+  header.sticky nav > div:first-child {
+    min-height: 4rem;
+  }
+
+  main#top {
+    scroll-margin-top: 4.75rem;
+  }
+
+  main#top > section:first-child {
+    padding-top: 0.55rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #skills .mt-1.grid {
+    gap: 0.7rem;
+  }
+
+  #skills .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.45rem;
+  }
+}
+
+
+/* Final browser-neutral academic hierarchy and compact rhythm. */
+:root {
+  --academic-heading-size: 1.45rem;
+  --academic-title-size: 1rem;
+  --academic-detail-size: 0.875rem;
+  --academic-meta-size: 0.875rem;
+  --academic-compact-line: 1.35;
+}
+
+/* All sixteen requested headings share the same family, size, weight, and line-height. */
+.name-level,
+.section-heading,
+#field-of-interest h2,
+#employment-history h2,
+#academic-background h2,
+#publications h2,
+#projects-certifications h2,
+#teaching h2,
+#skills h2,
+#contact h2,
+#publications h3,
+#projects-certifications h3,
+#teaching h3,
+#skills h3 {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: var(--academic-heading-size) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.035em !important;
+}
+
+/* Shared primary hierarchy: designation, degree, and paper titles. */
+.entry-title,
+.publication-item h4,
+#employment-history .entry-title,
+#academic-background .entry-title {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: var(--academic-title-size) !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.012em !important;
+}
+
+/* Shared secondary hierarchy: institution, venue, CGPA, and course/project/certification names. */
+.academic-detail,
+.academic-result,
+.publication-item p,
+.publication-item .text-sm,
+#employment-history .text-sm.leading-6,
+#projects-certifications li,
+#teaching .list-hover,
+#teaching .list-hover span:last-child,
+#skills .skill-chip,
+#skills .provider-label {
+  font-size: var(--academic-detail-size) !important;
+  line-height: var(--academic-compact-line) !important;
+}
+
+/* Shared metadata hierarchy: all employment, academic, and publication years. */
+.mono-accent,
+#employment-history .mono-accent,
+#academic-background .mono-accent,
+#publications .mono-accent,
+#projects-certifications .mono-accent {
+  font-size: var(--academic-meta-size) !important;
+  line-height: 1.35 !important;
+}
+
+/* Compact index rhythm, matching Theory Courses and Sessional Courses. */
+#projects-certifications .grid.gap-4,
+#teaching .grid.gap-6 {
+  gap: 0.8rem !important;
+}
+
+#projects-certifications .space-y-3 > :not([hidden]) ~ :not([hidden]),
+#projects-certifications .space-y-2 > :not([hidden]) ~ :not([hidden]),
+#projects-certifications ul > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.25rem !important;
+}
+
+#projects-certifications .space-y-3,
+#projects-certifications .space-y-2 {
+  row-gap: 0.25rem !important;
+}
+
+#projects-certifications ul li.list-hover,
+#teaching .list-hover {
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  line-height: var(--academic-compact-line) !important;
+}
+
+#projects-certifications .border-b.border-border\/70 {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+/* Compact Technical Skills in the same visual rhythm as course rows. */
+#skills .mt-1.grid {
+  gap: 0.55rem !important;
+}
+
+#skills .mt-4,
+#skills .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.45rem !important;
+}
+
+#skills .skill-chips {
+  margin-top: 0.25rem !important;
+  gap: 0.22rem !important;
+}
+
+#skills .skill-chip {
+  min-height: 1.45rem !important;
+  padding: 0.13rem 0.42rem !important;
+}
+
+#skills .skill-label {
+  line-height: 1.25 !important;
+}
+
+#skills .skill-language-block,
+#skills .skill-language-block .mt-2 {
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#skills .ielts-badge {
+  min-width: 3.05rem !important;
+  padding: 0.13rem 0.35rem !important;
+  font-size: 0.76rem !important;
+}
+
+#skills .ielts-badge-label {
+  font-size: 0.66rem !important;
+}
+
+/* Compact Contact while preserving readable tap targets. */
+#contact {
+  padding-bottom: 1.25rem !important;
+}
+
+#contact .contact-details {
+  gap: 0.7rem !important;
+  padding-top: 0 !important;
+}
+
+#contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.55rem !important;
+}
+
+#contact .contact-details p.leading-7 {
+  line-height: 1.35 !important;
+}
+
+#contact .contact-details .mt-2.flex {
+  margin-top: 0.45rem !important;
+  gap: 0.55rem 0.9rem !important;
+}
+
+/* Browser-neutral layout guards; no Edge-only formatting. */
+html,
+body {
+  overflow-x: hidden;
+}
+
+.container,
+.container > *,
+.container > * > * {
+  min-width: 0;
+}
+
+.nav-link {
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 639px) {
+  :root {
+    --academic-heading-size: 1.12rem;
+    --academic-title-size: 0.94rem;
+    --academic-detail-size: 0.84rem;
+    --academic-meta-size: 0.84rem;
+  }
+
+  #skills .mt-1.grid {
+    gap: 0.45rem !important;
+  }
+
+  #contact .contact-details {
+    gap: 0.55rem !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1279px) {
+  :root {
+    --academic-heading-size: 1.35rem;
+  }
+}
+/* Final targeted polish: one browser-neutral desktop header geometry. */
+@media (min-width: 1024px) {
+  header.sticky nav > div:first-child {
+    display: grid !important;
+    grid-template-columns: 2.5rem repeat(7, minmax(0, 1fr));
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 4.5rem;
+    padding-top: 0.65rem !important;
+    padding-bottom: 0.65rem !important;
+  }
+
+  header.sticky nav > div:first-child > a {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  header.sticky nav > div:first-child > div.hidden {
+    display: contents !important;
+  }
+
+  header.sticky nav > div:first-child > div.hidden > .nav-link {
+    min-width: 0;
+    width: 100%;
+    justify-self: stretch;
+    align-self: center;
+    padding-inline: 0.2rem;
+    font-size: 0.86rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(1) { grid-column: 2; }
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(2) { grid-column: 3; }
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(3) { grid-column: 4; }
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(4) { grid-column: 5; }
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(5) { grid-column: 6; }
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(6) { grid-column: 7; }
+  header.sticky nav > div:first-child > div.hidden > .nav-link:nth-child(7) { grid-column: 8; }
+
+  header.sticky nav > div:first-child > button {
+    display: none !important;
+  }
+}
+
+/* Keep the hero identification lines close to the name without changing their font size. */
+main#top > section:first-child .container > div > p {
+  margin-top: 0.55rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Make every technical-skill group use the same compact vertical interval. */
+#skills .space-y-4 > .list-hover,
+#skills .space-y-4 > .skill-language-block {
+  margin-top: 0.42rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#skills .space-y-4 > .list-hover:first-child,
+#skills .space-y-4 > .skill-language-block:first-child {
+  margin-top: 0 !important;
+}
+
+#skills .skill-chips {
+  margin-top: 0.22rem !important;
+}
+
+/* Slightly reduce the footer height while keeping breathing room around the back-to-top button. */
+footer {
+  padding-top: 1.35rem !important;
+  padding-bottom: 1.35rem !important;
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  header.sticky nav > div:first-child > div.hidden > .nav-link {
+    font-size: 0.78rem;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (max-width: 1023px) {
+  main#top > section:first-child .container > div > p {
+    margin-top: 0.45rem !important;
+  }
+
+  footer {
+    padding-top: 1.15rem !important;
+    padding-bottom: 1.15rem !important;
+  }
+}
+/* Restore the original Chrome-style menu geometry. */
+@media (min-width: 1024px) {
+  header.sticky nav > div:first-child {
+    display: flex !important;
+    grid-template-columns: none !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    min-height: 0;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  header.sticky nav > div:first-child > a {
+    grid-column: auto !important;
+    justify-self: auto;
+  }
+
+  header.sticky nav > div:first-child > div.hidden {
+    display: flex !important;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  header.sticky nav > div:first-child > div.hidden > .nav-link {
+    display: block;
+    grid-column: auto !important;
+    width: auto;
+    padding-inline: 0;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: left;
+  }
+}
+
+/* Keep the footer at its previous height. */
+footer {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Compact only the vertical rhythm below the name; keep the text sizes unchanged. */
+main#top > section:first-child .container > div > p {
+  margin-top: 0.3rem !important;
+  line-height: 1.28 !important;
+}
+
+main#top > section:first-child .container > div > p br {
+  line-height: 1.05;
+}
+
+@media (max-width: 1023px) {
+  main#top > section:first-child .container > div > p {
+    margin-top: 0.3rem !important;
+    line-height: 1.3 !important;
+  }
+
+  footer {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+/* Use only the first supplied sample's menu orientation and spacing. */
+@media (min-width: 1024px) {
+  header.sticky nav > div:first-child {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    min-height: 0;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  header.sticky nav > div:first-child > a {
+    flex: 0 0 auto;
+  }
+
+  header.sticky nav > div:first-child > div.hidden {
+    display: flex !important;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  header.sticky nav > div:first-child > div.hidden > .nav-link {
+    display: block;
+    width: auto;
+    padding-inline: 0;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+/* Slightly reduce only the hero identity text; keep the name unchanged. */
+main#top > section:first-child .container > div > p {
+  font-size: 0.95rem !important;
+  line-height: 1.28 !important;
+  margin-top: 0.3rem !important;
+}
+
+main#top > section:first-child .container > div > p span {
+  font-size: 0.9rem !important;
+}
+
+/* Equal compact vertical rhythm for Programming, Web Development, Tools, and Language Proficiency. */
+#skills .mt-1.grid {
+  gap: 0.42rem !important;
+}
+
+#skills .space-y-4 > .list-hover,
+#skills .space-y-4 > .skill-language-block {
+  margin-top: 0.38rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#skills .space-y-4 > .list-hover:first-child,
+#skills .space-y-4 > .skill-language-block:first-child {
+  margin-top: 0 !important;
+}
+
+#skills .skill-chips {
+  margin-top: 0.2rem !important;
+  gap: 0.22rem !important;
+}
+
+#skills .skill-language-block .mt-2 {
+  margin-top: 0.2rem !important;
+}
+
+@media (max-width: 1023px) {
+  main#top > section:first-child .container > div > p {
+    font-size: 0.95rem !important;
+    margin-top: 0.3rem !important;
+  }
+
+  main#top > section:first-child .container > div > p span {
+    font-size: 0.88rem !important;
+  }
+
+  #skills .mt-1.grid {
+    gap: 0.35rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.32rem !important;
+  }
+}
+/* Menu-only correction: restore the first sample's smaller navigation text. */
+@media (min-width: 1024px) {
+  header.sticky nav > div:first-child > div.hidden {
+    display: flex !important;
+    align-items: center;
+    gap: 1.75rem;
+    margin-left: 1rem;
+  }
+
+  header.sticky nav > div:first-child > div.hidden > .nav-link {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    padding-inline: 0;
+  }
+}
+/* Desktop: bring the right content/vertical rule slightly closer to each heading. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 2.15rem !important;
+  }
+}
+
+/* Mobile parity pass: mirror the desktop hierarchy in a compact single-column flow. */
+@media (max-width: 767px) {
+  :root {
+    --academic-heading-size: 1.12rem;
+    --academic-title-size: 0.94rem;
+    --academic-detail-size: 0.84rem;
+    --academic-meta-size: 0.84rem;
+    --academic-compact-line: 1.35;
+  }
+
+  .name-level,
+  .section-heading,
+  #field-of-interest h2,
+  #employment-history h2,
+  #academic-background h2,
+  #publications h2,
+  #projects-certifications h2,
+  #teaching h2,
+  #skills h2,
+  #contact h2,
+  #publications h3,
+  #projects-certifications h3,
+  #teaching h3,
+  #skills h3 {
+    font-size: var(--academic-heading-size) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .entry-title,
+  .publication-item h4,
+  #employment-history .entry-title,
+  #academic-background .entry-title {
+    font-size: var(--academic-title-size) !important;
+    font-weight: 700 !important;
+    line-height: 1.32 !important;
+  }
+
+  .academic-detail,
+  .academic-result,
+  .publication-item p,
+  .publication-item .text-sm,
+  #employment-history .text-sm.leading-6,
+  #projects-certifications li,
+  #teaching .list-hover,
+  #teaching .list-hover span:last-child,
+  #skills .skill-chip,
+  #skills .provider-label {
+    font-size: var(--academic-detail-size) !important;
+    line-height: var(--academic-compact-line) !important;
+  }
+
+  .mono-accent,
+  #employment-history .mono-accent,
+  #academic-background .mono-accent,
+  #publications .mono-accent,
+  #projects-certifications .mono-accent {
+    font-size: var(--academic-meta-size) !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Compact hero identity while preserving the name's existing size. */
+  main#top > section:first-child .container > div > p {
+    margin-top: 0.3rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+  }
+
+  main#top > section:first-child .container > div > p span {
+    font-size: 0.88rem !important;
+  }
+
+  /* Field bullets: same compact rhythm on mobile. */
+  #field-of-interest ul {
+    margin-top: 0.5rem !important;
+    column-gap: 0.75rem !important;
+    row-gap: 0.15rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Timeline entries and publications retain the desktop title/detail relationship. */
+  #employment-history .employment-timeline,
+  #academic-background ul,
+  #publications .space-y-4 {
+    gap: 0.7rem !important;
+  }
+
+  .employment-entry,
+  .academic-entry,
+  .publication-item {
+    padding-left: 1rem !important;
+  }
+
+  #employment-history .entry-title,
+  #academic-background .entry-title,
+  .publication-item h4 {
+    margin-top: 0.45rem !important;
+  }
+
+  /* Projects/certifications and courses use the same compact index rhythm. */
+  #projects-certifications .grid.gap-4,
+  #teaching .grid.gap-6 {
+    gap: 0.65rem !important;
+  }
+
+  #projects-certifications .space-y-3 > :not([hidden]) ~ :not([hidden]),
+  #projects-certifications .space-y-2 > :not([hidden]) ~ :not([hidden]),
+  #projects-certifications ul > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.22rem !important;
+  }
+
+  #projects-certifications .border-b.border-border\/70 {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+  }
+
+  #teaching .list-hover {
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+  }
+
+  /* Skills: all four groups use identical compact spacing. */
+  #skills .mt-1.grid {
+    gap: 0.35rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.3rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #skills .space-y-4 > .list-hover:first-child,
+  #skills .space-y-4 > .skill-language-block:first-child {
+    margin-top: 0 !important;
+  }
+
+  #skills .skill-chips,
+  #skills .skill-language-block .mt-2 {
+    margin-top: 0.2rem !important;
+  }
+
+  /* Contact follows the same compact hierarchy and spacing. */
+  #contact .contact-details {
+    gap: 0.55rem !important;
+    padding-top: 0 !important;
+  }
+
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.55rem !important;
+  }
+
+  #contact .contact-details p.leading-7 {
+    line-height: 1.35 !important;
+  }
+}
+/* Next compactness pass: desktop gap slightly smaller, mobile index sections match course rows. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 1.85rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Projects and Certifications: same compact row rhythm as Theory/Sessional Courses. */
+  #projects-certifications .container {
+    gap: 0.7rem !important;
+  }
+
+  #projects-certifications .grid.gap-4 {
+    gap: 0.42rem !important;
+  }
+
+  #projects-certifications .mb-3 {
+    margin-bottom: 0.35rem !important;
+  }
+
+  #projects-certifications .space-y-3,
+  #projects-certifications .space-y-2 {
+    row-gap: 0.12rem !important;
+  }
+
+  #projects-certifications .space-y-3 > :not([hidden]) ~ :not([hidden]),
+  #projects-certifications .space-y-2 > :not([hidden]) ~ :not([hidden]),
+  #projects-certifications ul > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.12rem !important;
+  }
+
+  #projects-certifications .border-b.border-border\/70 {
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+
+  #projects-certifications ul li.list-hover {
+    padding-top: 0.04rem !important;
+    padding-bottom: 0.04rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Skills: equal compact spacing for Programming, Web Development, Tools, Language Proficiency. */
+  #skills .container {
+    gap: 0.7rem !important;
+  }
+
+  #skills .mt-1.grid {
+    gap: 0.2rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.2rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover:first-child,
+  #skills .space-y-4 > .skill-language-block:first-child {
+    margin-top: 0 !important;
+  }
+
+  #skills .skill-chips,
+  #skills .skill-language-block .mt-2 {
+    margin-top: 0.12rem !important;
+  }
+
+  #skills .skill-chips {
+    gap: 0.16rem !important;
+  }
+
+  #skills .skill-chip {
+    min-height: 1.35rem !important;
+    padding: 0.1rem 0.34rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Contact: compact the mobile section without reducing readability. */
+  #contact .container {
+    gap: 0.7rem !important;
+  }
+
+  #contact .contact-details {
+    gap: 0.35rem !important;
+  }
+
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.35rem !important;
+  }
+
+  #contact .contact-details p.leading-7 {
+    line-height: 1.25 !important;
+  }
+
+  #contact .contact-details .mt-2.flex {
+    margin-top: 0.25rem !important;
+    gap: 0.35rem 0.7rem !important;
+  }
+}
+/* Final mobile observation pass and a tighter desktop section gap. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 1.45rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Smaller identity details below the name; the name itself stays unchanged. */
+  main#top > section:first-child .container > div > p {
+    font-size: 0.88rem !important;
+    line-height: 1.25 !important;
+  }
+
+  main#top > section:first-child .container > div > p span {
+    font-size: 0.82rem !important;
+  }
+
+  /* Make all four Technical Skills groups use one tighter vertical interval. */
+  #skills .mt-1.grid {
+    gap: 0.18rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.16rem !important;
+  }
+
+  #skills .skill-chips,
+  #skills .skill-language-block .mt-2 {
+    margin-top: 0.1rem !important;
+  }
+
+  #skills .skill-chips {
+    gap: 0.14rem !important;
+  }
+
+  /* Email, Phone, and Location use the same mobile vertical spacing. */
+  #contact .contact-details {
+    gap: 0.28rem !important;
+  }
+
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.28rem !important;
+  }
+
+  #contact .contact-details .space-y-4 {
+    row-gap: 0.28rem !important;
+  }
+
+  #contact .contact-details p.leading-7 {
+    line-height: 1.25 !important;
+  }
+
+  /* Lower the back-to-top button slightly after the Contact content. */
+  div.min-h-screen > button[aria-label="Back to top"] {
+    bottom: 0.55rem !important;
+  }
+}
+/* Contact, desktop-gap, technical-skills, and browser-title follow-up. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 1.05rem !important;
+  }
+
+  #skills .mt-1.grid {
+    gap: 0.28rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.22rem !important;
+  }
+
+  #skills .skill-chips,
+  #skills .skill-language-block .mt-2 {
+    margin-top: 0.14rem !important;
+  }
+
+  #skills .skill-chips {
+    gap: 0.16rem !important;
+  }
+}
+
+/* Contact: reduce only the Email-to-Phone interval; preserve Phone-to-Location rhythm. */
+#contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.2rem !important;
+}
+
+/* Bring the floating button closer to the Contact divider/section end. */
+div.min-h-screen > button[aria-label="Back to top"] {
+  bottom: 0.85rem !important;
+}
+
+@media (max-width: 767px) {
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.2rem !important;
+  }
+
+  #contact .contact-details {
+    gap: 0.2rem !important;
+  }
+
+  div.min-h-screen > button[aria-label="Back to top"] {
+    bottom: 0.75rem !important;
+  }
+}
+/* More aggressive spacing correction requested for Contact, desktop columns, and Skills. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 0.6rem !important;
+  }
+
+  #skills .mt-1.grid {
+    gap: 0.14rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.12rem !important;
+  }
+
+  #skills .skill-chips,
+  #skills .skill-language-block .mt-2 {
+    margin-top: 0.08rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* One consistent rhythm for Email, Phone, and Location blocks. */
+  #contact .contact-details {
+    gap: 0.12rem !important;
+    row-gap: 0.12rem !important;
+  }
+
+  #contact .contact-details > div {
+    row-gap: 0.12rem !important;
+  }
+
+  #contact .contact-details .space-y-4 {
+    gap: 0.12rem !important;
+    row-gap: 0.12rem !important;
+  }
+
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]),
+  #contact .contact-details .space-y-4 > .flex + .flex {
+    margin-top: 0.12rem !important;
+  }
+
+  #contact .contact-details .flex {
+    gap: 0.65rem !important;
+  }
+
+  #contact .contact-details p,
+  #contact .contact-details a {
+    line-height: 1.25 !important;
+  }
+
+  #contact .contact-details p.mt-1,
+  #contact .contact-details a.mt-1 {
+    margin-top: 0.1rem !important;
+  }
+
+  #contact .contact-details .mt-2.flex {
+    margin-top: 0.12rem !important;
+  }
+
+  /* Place the floating button just after the bottom divider area. */
+  div.min-h-screen > button[aria-label="Back to top"] {
+    bottom: 0.2rem !important;
+  }
+
+  /* More compact mobile skill rhythm. */
+  #skills .mt-1.grid {
+    gap: 0.12rem !important;
+  }
+
+  #skills .space-y-4 > .list-hover,
+  #skills .space-y-4 > .skill-language-block {
+    margin-top: 0.12rem !important;
+  }
+
+  #skills .skill-chips,
+  #skills .skill-language-block .mt-2 {
+    margin-top: 0.08rem !important;
+  }
+}
+/* Requested test pass: desktop gap 0.4rem; mobile Contact rhythm uniform; button gap 0.1rem. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 0.4rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* One uniform interval for Email, Phone, Location and the adjacent contact items. */
+  #contact .contact-details {
+    gap: 0.35rem !important;
+    row-gap: 0.35rem !important;
+  }
+
+  #contact .contact-details > div,
+  #contact .contact-details .space-y-4 {
+    gap: 0.35rem !important;
+    row-gap: 0.35rem !important;
+  }
+
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]),
+  #contact .contact-details .space-y-4 > .flex + .flex {
+    margin-top: 0.35rem !important;
+  }
+
+  #contact .contact-details p.mt-1,
+  #contact .contact-details a.mt-1,
+  #contact .contact-details .mt-2.flex {
+    margin-top: 0.15rem !important;
+  }
+
+  /* 0.1rem keeps the button close to the divider rather than far below it. */
+  div.min-h-screen > button[aria-label="Back to top"] {
+    bottom: 0.1rem !important;
+  }
+}
+/* Structural fix: Contact must flow vertically on mobile/tablet, not as two columns. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    column-gap: 0.2rem !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #contact .contact-details {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.65rem !important;
+    row-gap: 0.65rem !important;
+  }
+
+  #contact .contact-details > div,
+  #contact .contact-details .space-y-4 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    row-gap: 0.65rem !important;
+  }
+
+  #contact .contact-details .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0 !important;
+  }
+
+  #contact .contact-details .flex {
+    gap: 0.65rem !important;
+  }
+
+  #contact .contact-details p.mt-1,
+  #contact .contact-details a.mt-1,
+  #contact .contact-details .mt-2.flex {
+    margin-top: 0.18rem !important;
+  }
+
+  #contact .contact-details p.leading-7 {
+    line-height: 1.35 !important;
+  }
+
+  /* Keep the button in the footer area, close to the divider without overlapping content. */
+  div.min-h-screen > button[aria-label="Back to top"] {
+    bottom: 0.75rem !important;
+  }
+}
+/* Root-cause fix: Email/Phone inner rhythm, stronger desktop column compression, button position. */
+@media (min-width: 1024px) {
+  #employment-history .container,
+  #academic-background .container,
+  #publications .container,
+  #projects-certifications .container,
+  #teaching .container,
+  #skills .container,
+  #contact .container {
+    grid-template-columns: minmax(0, 0.28fr) minmax(0, 0.72fr) !important;
+    column-gap: 0.2rem !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  /* Keep Phone-to-Location rhythm, but reduce only the excessive Email-to-Phone gap. */
+  #contact .contact-details > div:first-child {
+    gap: 0.3rem !important;
+    row-gap: 0.3rem !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 {
+    gap: 0.3rem !important;
+    row-gap: 0.3rem !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 > .flex + .flex {
+    margin-top: 0 !important;
+  }
+
+  /* Move the fixed button visibly upward from the divider/footer area. */
+  div.min-h-screen > button[aria-label="Back to top"] {
+    bottom: 1.15rem !important;
+  }
+}
+/* Exact fix: Tailwind space-y-4 was adding an unwanted top margin before Phone. */
+@media (max-width: 1023px) {
+  #contact .contact-details > div:first-child > .space-y-4 > .flex:nth-child(2) {
+    margin-top: 0 !important;
+    margin-block-start: 0 !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 {
+    row-gap: 0.3rem !important;
+  }
+}
+/* Definitive fix: remove every inherited space-y transition margin inside Contact. */
+@media (max-width: 1023px) {
+  #contact .contact-details > div:first-child > .space-y-4 {
+    row-gap: 0.65rem !important;
+    gap: 0.65rem !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 > * + *,
+  #contact .contact-details > div:first-child > .space-y-4 > .flex:nth-child(2) {
+    margin-top: 0 !important;
+    margin-block-start: 0 !important;
+  }
+}
+/* Restore original sticky menu behavior. The previous overflow-x:hidden could create a scroll container and break sticky positioning. */
+html,
+body {
+  overflow-x: clip !important;
+}
+
+header.sticky {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  width: 100% !important;
+}
+/* Final sticky fix: body overflow must not create a scroll container for position: sticky. */
+html {
+  overflow-x: clip !important;
+}
+
+body {
+  overflow-x: visible !important;
+}
+
+header.sticky {
+  position: sticky !important;
+  inset-block-start: 0 !important;
+  z-index: 50 !important;
+}
+/* Uniform reference rhythm: use the Academic Background Masters metadata gap everywhere. */
+@media (min-width: 1024px) {
+  #employment-history .employment-entry h3,
+  #academic-background .academic-entry strong,
+  #publications .publication-item h4 {
+    margin-top: 0.5rem !important;
+  }
+
+  #academic-background .academic-entry .mono-accent {
+    margin-bottom: 0.5rem !important;
+  }
+
+  #publications .publication-item h4 {
+    margin-top: 0.5rem !important;
+  }
+}
+
+/* Mobile Contact: remove both sides of the inherited Tailwind transition margin. */
+@media (max-width: 1023px) {
+  #contact .contact-details > div:first-child > .space-y-4 {
+    gap: 0.45rem !important;
+    row-gap: 0.45rem !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 > * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 > .flex + .flex {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #contact .contact-details > div:first-child > .space-y-4 > .flex:first-child > div > .mt-1.flex {
+    margin-top: 0.2rem !important;
+    row-gap: 0.2rem !important;
+  }
+}
+/* First Employment row: offset the Current badge's extra row height so its title matches the 7.5px reference gap. */
+@media (min-width: 1024px) {
+  #employment-history .employment-entry:first-child h3 {
+    margin-top: 0.18rem !important;
+  }
+}
+/* Robust correction: align first Employment Lecturer to the same 7.5px visual gap as the reference rows. */
+@media (min-width: 1024px) {
+  #employment-history .employment-entry:first-child > h3.entry-title {
+    margin-top: 0 !important;
+    transform: translateY(-5px) !important;
+  }
+}
+/* Balance the first Employment row: final measured target is the 7.5px Academic Masters gap. */
+@media (min-width: 1024px) {
+  #employment-history .employment-entry:first-child > h3.entry-title {
+    margin-top: 0 !important;
+    transform: translateY(2.5px) !important;
+  }
+}
+/* Rebuilt Contact section: one predictable vertical rhythm on mobile, balanced layout on desktop. */
+.contact-layout {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-items {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.contact-item-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+}
+
+.contact-item-content {
+  min-width: 0;
+  display: grid;
+  gap: 0.22rem;
+}
+
+.contact-label {
+  margin: 0;
+  color: color-mix(in oklch, var(--foreground) 50%, transparent);
+  font-size: 0.7rem;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-value-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  min-width: 0;
+}
+
+.contact-value {
+  display: inline-block;
+  min-width: 0;
+  font-size: var(--academic-detail-size);
+  font-weight: 600;
+  line-height: var(--academic-compact-line);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2rem;
+}
+
+.contact-location {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.contact-copy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid color-mix(in oklch, var(--primary) 20%, transparent);
+  padding: 0.3rem 0.55rem;
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 1rem;
+  padding-top: 0.15rem;
+  border-top: 1px solid color-mix(in oklch, var(--border) 75%, transparent);
+}
+
+.contact-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--academic-detail-size);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: 1.5rem;
+  }
+
+  .contact-socials {
+    justify-content: flex-end;
+    border-top: 0;
+    border-left: 1px solid color-mix(in oklch, var(--border) 75%, transparent);
+    padding-top: 0;
+    padding-left: 1.25rem;
+  }
+
+  #employment-history .employment-entry h3,
+  #academic-background .academic-entry strong,
+  #publications .publication-item h4 {
+    margin-top: 0.5rem !important;
+  }
+
+  #academic-background .academic-entry .mono-accent {
+    margin-bottom: 0.5rem !important;
+  }
+
+  #employment-history .employment-entry:first-child > h3.entry-title {
+    margin-top: 0 !important;
+    transform: translateY(2.5px) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contact-layout {
+    gap: 0.65rem;
+  }
+
+  .contact-items {
+    gap: 0.65rem;
+  }
+
+  .contact-socials {
+    gap: 0.5rem 0.85rem;
+  }
+
+  #contact .contact-layout,
+  #contact .contact-items,
+  #contact .contact-item-content {
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .contact-item {
+    gap: 0.65rem;
+  }
+
+  .contact-value-row {
+    align-items: flex-start;
+    gap: 0.3rem 0.55rem;
+  }
+
+  .contact-copy-button {
+    padding: 0.25rem 0.45rem;
+  }
+
+  .contact-socials {
+    padding-top: 0.45rem;
+  }
+}
+/* Restore the previous desktop Contact arrangement only. Mobile Contact remains unchanged. */
+@media (min-width: 1024px) {
+  #contact .contact-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: start !important;
+    gap: 1.5rem !important;
+  }
+
+  #contact .contact-items {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    grid-column: 1 / -1 !important;
+    gap: 0.7rem !important;
+  }
+
+  #contact .contact-item:nth-child(1),
+  #contact .contact-item:nth-child(2) {
+    grid-column: 1 !important;
+  }
+
+  #contact .contact-location-item {
+    grid-column: 2 !important;
+    grid-row: 1 / span 2 !important;
+    align-self: start !important;
+  }
+
+  #contact .contact-socials {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    justify-content: flex-start !important;
+    border-left: 0 !important;
+    border-top: 1px solid color-mix(in oklch, var(--border) 75%, transparent) !important;
+    padding: 0.65rem 0 0 !important;
+  }
+}
+
+/* Academic Masters reference rhythm: 0.5rem / 7.5px after the date row. */
+#employment-history .employment-entry > h3.entry-title,
+#academic-background .academic-entry > div > strong.entry-title,
+#publications .publication-item > h4.entry-title {
+  margin-top: 0.5rem !important;
+}
+
+#academic-background .academic-entry > span.mono-accent {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Current badge increases the first Employment date row height; visually align its title to the same reference gap. */
+#employment-history .employment-entry:first-child > h3.entry-title {
+  margin-top: 0 !important;
+  transform: translateY(2.5px) !important;
+}
+
+/* Conference titles have no year row; do not introduce a false metadata gap there. */
+#publications > .container .publication-item:not(:has(.mono-accent)) > h4.entry-title {
+  margin-top: 0 !important;
+}
+/* Shared entity rhythm: Employment Lecturer spacing is the reference (15px / 1rem). */
+#employment-history .employment-entry > h3.entry-title {
+  margin-top: 1rem !important;
+  transform: none !important;
+}
+
+#academic-background .academic-entry > span.mono-accent {
+  margin-bottom: 1rem !important;
+}
+
+#academic-background .academic-entry > div > strong.entry-title {
+  margin-top: 0 !important;
+}
+
+/* The Current badge makes the first date row taller; visually normalize it to the same 15px gap. */
+#employment-history .employment-entry:first-child > h3.entry-title {
+  margin-top: 1rem !important;
+  transform: translateY(-4px) !important;
+}
+/* Tight shared entity rhythm: Academic M.Sc. is the visual reference. */
+#employment-history .employment-entry > h3.entry-title,
+#academic-background .academic-entry > div > strong.entry-title {
+  margin-top: 0.5rem !important;
+  transform: none !important;
+}
+
+#academic-background .academic-entry > span.mono-accent {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Employment designation-to-department should sit directly in the same compact rhythm as degree-to-university. */
+#employment-history .employment-entry > p.mt-2 {
+  margin-top: 0 !important;
+}
+
+/* Neutralize the Current badge row height so 2026 — Present → Lecturer matches the other three entities. */
+#employment-history .employment-entry:first-child > h3.entry-title {
+  margin-top: 0.5rem !important;
+  transform: translateY(-5px) !important;
+}
+/* Final four-entity rhythm: M.Sc. is the reference for date-to-title and title-to-detail spacing. */
+#employment-history .employment-entry {
+  position: relative;
+}
+
+#employment-history .employment-entry > h3.entry-title,
+#academic-background .academic-entry > div > strong.entry-title {
+  margin-top: 0.5rem !important;
+  transform: none !important;
+}
+
+#employment-history .employment-entry > p.mt-2 {
+  margin-top: 0 !important;
+}
+
+#academic-background .academic-entry > span.mono-accent {
+  margin-bottom: 0.5rem !important;
+}
+
+#academic-background .academic-entry > div > strong.entry-title + .academic-detail {
+  margin-top: 0 !important;
+}
+
+/* Keep Current visually aligned but out of the date row's layout height. */
+#employment-history .employment-entry:first-child > .flex {
+  position: relative;
+}
+
+#employment-history .employment-entry:first-child > .flex > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#employment-history .employment-entry:first-child > h3.entry-title {
+  margin-top: 0.5rem !important;
+  transform: none !important;
+}
+/* Exact four-gap rule: the first Employment row is the reference. */
+#employment-history .employment-entry > .flex {
+  min-height: 0 !important;
+}
+
+#employment-history .employment-entry > h3.entry-title,
+#academic-background .academic-entry > div > strong.entry-title {
+  margin-top: 0.5rem !important;
+  transform: none !important;
+}
+
+#academic-background .academic-entry > span.mono-accent {
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#employment-history .employment-entry:first-child > .flex > span {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+#employment-history .employment-entry > p.mt-2 {
+  margin-top: 0 !important;
 }

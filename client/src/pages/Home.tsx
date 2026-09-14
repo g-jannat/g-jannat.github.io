@@ -261,7 +261,51 @@ export default function Home() {
         </section>
 
 
-        <section id="contact" className="section-boundary bg-[#f1ece2] pt-2 pb-3 sm:pt-3 sm:pb-4 md:pt-4 md:pb-6"><div className="container grid gap-5 sm:gap-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-10"><div><h2 className="section-heading text-primary">Contact</h2></div><div><div className="contact-details mt-1 grid gap-3 pt-1 sm:grid-cols-2"><div className="space-y-4"><div className="flex gap-4"><Mail className="mt-1 h-5 w-5 shrink-0 text-accent" /><div><p className="text-xs uppercase tracking-[0.14em] text-foreground/50">Email</p><div className="mt-1 flex flex-wrap items-center gap-3"><a href={`mailto:${emailAddress}`} className="break-all text-sm font-semibold text-primary underline decoration-accent underline-offset-4">{emailAddress}</a><button type="button" onClick={copyEmail} className="button-lift inline-flex items-center gap-1.5 border border-primary/20 px-2.5 py-1.5 text-xs font-semibold text-primary" aria-label="Copy email address">{emailCopied ? <Check className="h-3.5 w-3.5 text-accent" /> : <Copy className="h-3.5 w-3.5 text-accent" />}{emailCopied ? 'Copied' : 'Copy email'}</button></div></div></div><div className="flex gap-4"><Phone className="mt-1 h-5 w-5 shrink-0 text-accent" /><div><p className="text-xs uppercase tracking-[0.14em] text-foreground/50">Phone</p><a href="tel:+8801783188423" className="mt-1 inline-block text-sm font-semibold text-primary underline decoration-accent underline-offset-4">+88-01783188423</a></div></div></div><div className="space-y-4"><div className="flex gap-4"><MapPin className="mt-1 h-5 w-5 shrink-0 text-accent" /><div><p className="text-xs uppercase tracking-[0.14em] text-foreground/50">Location</p><p className="mt-1 text-sm leading-7 text-primary">Department of Information and Communication Engineering<br />Daffodil International University<br />Ashulia, Savar, Dhaka–1216</p></div></div><div className="mt-2 flex flex-wrap gap-4"><a href="https://orcid.org/0000-0001-7487-1915" target="_blank" rel="noreferrer" aria-label="Open ORCID profile in a new tab" className="inline-flex items-center gap-2 text-sm font-semibold text-primary no-underline"><span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#a6ce39] text-[9px] font-bold leading-none text-white" aria-hidden="true">iD</span><span className="underline decoration-accent underline-offset-4">ORCID</span> <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" /></a><a href="https://scholar.google.com/citations?user=tNKyeGMAAAAJ" target="_blank" rel="noreferrer" aria-label="Open Google Scholar profile in a new tab" className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline decoration-accent underline-offset-4"><GraduationCap className="h-4 w-4 text-accent" />Google Scholar <ExternalLink className="h-3.5 w-3.5" /></a></div></div></div></div></div></section>
+        <section id="contact" className="section-boundary bg-[#f1ece2] pt-2 pb-3 sm:pt-3 sm:pb-4 md:pt-4 md:pb-6">
+          <div className="container grid gap-5 sm:gap-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-10">
+            <div><h2 className="section-heading text-primary">Contact</h2></div>
+            <div className="contact-layout">
+              <div className="contact-items">
+                <div className="contact-item">
+                  <Mail className="contact-item-icon text-accent" aria-hidden="true" />
+                  <div className="contact-item-content">
+                    <p className="contact-label">Email</p>
+                    <div className="contact-value-row">
+                      <a href={`mailto:${emailAddress}`} className="contact-value break-all text-primary">{emailAddress}</a>
+                      <button type="button" onClick={copyEmail} className="button-lift contact-copy-button" aria-label="Copy email address">
+                        {emailCopied ? <Check className="h-3.5 w-3.5 text-accent" /> : <Copy className="h-3.5 w-3.5 text-accent" />}
+                        {emailCopied ? 'Copied' : 'Copy email'}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <Phone className="contact-item-icon text-accent" aria-hidden="true" />
+                  <div className="contact-item-content">
+                    <p className="contact-label">Phone</p>
+                    <a href="tel:+8801783188423" className="contact-value text-primary">+88-01783188423</a>
+                  </div>
+                </div>
+                <div className="contact-item contact-location-item">
+                  <MapPin className="contact-item-icon text-accent" aria-hidden="true" />
+                  <div className="contact-item-content">
+                    <p className="contact-label">Location</p>
+                    <p className="contact-value contact-location text-primary">Department of Information and Communication Engineering<br />Daffodil International University<br />Ashulia, Savar, Dhaka–1216</p>
+                  </div>
+                </div>
+              </div>
+              <div className="contact-socials">
+                <a href="https://orcid.org/0000-0001-7487-1915" target="_blank" rel="noreferrer" aria-label="Open ORCID profile in a new tab" className="contact-social-link text-primary no-underline">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#a6ce39] text-[9px] font-bold leading-none text-white" aria-hidden="true">iD</span>
+                  <span className="underline decoration-accent underline-offset-4">ORCID</span><ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
+                </a>
+                <a href="https://scholar.google.com/citations?user=tNKyeGMAAAAJ" target="_blank" rel="noreferrer" aria-label="Open Google Scholar profile in a new tab" className="contact-social-link text-primary">
+                  <GraduationCap className="h-4 w-4 text-accent" /><span className="underline decoration-accent underline-offset-4">Google Scholar</span><ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </main>
 

@@ -140,10 +140,16 @@ export default function Home() {
     }
   };
 
+  // Edge-only detection: adds `is-edge` class to <html> so CSS can target
+  // Microsoft Edge specifically without touching Chrome/Firefox styling.
   useEffect(() => {
-    const isMicrosoftEdge = /Edg\//.test(navigator.userAgent);
-    if (isMicrosoftEdge) document.documentElement.classList.add('edge-browser');
+    const isEdge = /Edg\//.test(window.navigator.userAgent);
+    if (isEdge) {
+      document.documentElement.classList.add('is-edge');
+    }
+  }, []);
 
+  useEffect(() => {
     const updateActiveSection = () => {
       const headerOffset = window.innerWidth < 1024 ? 112 : 132;
       setShowBackToTop(window.scrollY > 560);
@@ -163,7 +169,6 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', updateActiveSection);
       window.removeEventListener('resize', updateActiveSection);
-      if (isMicrosoftEdge) document.documentElement.classList.remove('edge-browser');
     };
   }, []);
 

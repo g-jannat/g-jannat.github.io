@@ -213,7 +213,7 @@ export default function Home() {
           <div className="container grid gap-5 sm:gap-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-10">
             <div><h2 className="section-heading text-primary">Employment History</h2></div>
             <div className="employment-timeline">
-              <div className="employment-entry"><div className="flex flex-wrap items-baseline justify-between gap-3"><p className="mono-accent text-sm text-accent">2026 — Present</p><span className="border border-accent/40 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-accent">Current</span></div><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Information and Communication Engineering<br />Daffodil International University, Bangladesh</p></div>
+              <div className="employment-entry"><p className="mono-accent text-sm text-accent">2026 — Present</p><span className="employment-current-badge border border-accent/40 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-accent">Current</span><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Information and Communication Engineering<br />Daffodil International University, Bangladesh</p></div>
               <div className="employment-entry"><p className="mono-accent text-sm text-accent">2023 — 2025</p><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Electronics and Telecommunication Engineering<br />Chittagong University of Engineering and Technology, Bangladesh</p></div>
             </div>
           </div>

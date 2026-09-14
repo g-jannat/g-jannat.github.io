@@ -2512,3 +2512,32 @@ header.sticky {
 #employment-history .employment-entry > p.mt-2 {
   margin-top: 0 !important;
 }
+/* Structural parity: all four date-to-title gaps share one direct 0.5rem interval. */
+#employment-history .employment-entry {
+  position: relative;
+}
+
+#employment-history .employment-entry > h3.entry-title {
+  margin-top: 0.5rem !important;
+  transform: none !important;
+}
+
+#employment-history .employment-entry > p.mt-2 {
+  margin-top: 0 !important;
+}
+
+#employment-history .employment-entry:first-child > .employment-current-badge {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+#academic-background .academic-entry > span.mono-accent {
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#academic-background .academic-entry > div > strong.entry-title {
+  display: block !important;
+  margin-top: 0 !important;
+}

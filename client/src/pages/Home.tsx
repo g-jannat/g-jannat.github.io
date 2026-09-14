@@ -141,6 +141,9 @@ export default function Home() {
   };
 
   useEffect(() => {
+    const isMicrosoftEdge = /Edg\//.test(navigator.userAgent);
+    if (isMicrosoftEdge) document.documentElement.classList.add('edge-browser');
+
     const updateActiveSection = () => {
       const headerOffset = window.innerWidth < 1024 ? 112 : 132;
       setShowBackToTop(window.scrollY > 560);
@@ -160,6 +163,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', updateActiveSection);
       window.removeEventListener('resize', updateActiveSection);
+      if (isMicrosoftEdge) document.documentElement.classList.remove('edge-browser');
     };
   }, []);
 

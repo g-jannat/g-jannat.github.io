@@ -2541,3 +2541,41 @@ header.sticky {
   display: block !important;
   margin-top: 0 !important;
 }
+/* Edge-only menu correction. Chrome, Firefox, and other browsers are unaffected. */
+@media (min-width: 1024px) {
+  .edge-browser header.sticky nav > div:first-child {
+    margin-inline-start: -0.6rem !important;
+    width: calc(100% + 0.6rem) !important;
+    grid-template-columns: 2.5rem repeat(7, minmax(0, 1fr)) !important;
+    column-gap: 0.65rem !important;
+    padding-inline: 0 !important;
+  }
+
+  .edge-browser header.sticky nav > div:first-child > a {
+    justify-self: start !important;
+    margin: 0 !important;
+  }
+
+  .edge-browser header.sticky nav > div:first-child > div.hidden > .nav-link {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    font-size: 0.78rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    padding-inline: 0 !important;
+    text-align: center !important;
+  }
+}
+/* Edge-only page-width correction. Chrome and Firefox keep the existing container geometry. */
+@media (min-width: 1024px) {
+  .edge-browser .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding-inline: 2rem !important;
+  }
+
+  .edge-browser header.sticky nav.container {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}

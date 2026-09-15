@@ -178,7 +178,7 @@ export default function Home() {
         <nav className="container" aria-label="Primary navigation">
           <div className="flex items-center justify-between py-3 sm:py-4 md:py-5">
             <a href="#top" aria-label="Gazi Jannatul Ferdous portfolio home" className="group flex items-center gap-3 no-underline">
-              <span className="flex h-10 w-10 items-center justify-center border border-accent bg-accent text-sm font-semibold tracking-tight text-accent-foreground transition-transform group-hover:-rotate-6">GJF</span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent bg-accent text-sm font-semibold tracking-tight text-accent-foreground transition-transform group-hover:-rotate-6">GJF</span>
             </a>
             <div className="hidden items-center gap-7 lg:flex">
               {navigationItems.map((item) => <a key={item.href} href={item.href} onClick={() => navigateToSection(item.href)} aria-current={activeSection === item.href ? 'location' : undefined} className={`nav-link no-underline ${activeSection === item.href ? 'active-nav-link' : ''}`}>{item.label}</a>)}

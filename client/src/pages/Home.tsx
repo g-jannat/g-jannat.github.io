@@ -80,6 +80,7 @@ const theoryCourses = [
   ['ICE-1141', 'Computer Fundamentals'],
   ['ICE-3140', 'Simulation and Modeling'],
   ['ICE-2241', 'Signals and Communication Systems'],
+  ['0713-111', 'Electrical Circuits I'],
 ];
 
 const sessionalCourses = [
@@ -90,6 +91,7 @@ const sessionalCourses = [
   ['ICE-2242', 'Signals and Communication Systems Laboratory'],
   ['ICE-3242', 'Digital Signal Processing Laboratory'],
   ['0611-121', 'Computer Fundamentals Sessional'],
+  ['0713-122', 'Electrical Circuits Laboratory'],
 ];
 
 const certificationGroups = [
@@ -209,7 +211,7 @@ export default function Home() {
           <div className="container grid min-h-0 items-start gap-9 pb-2 pt-2 sm:gap-12 sm:pb-3 sm:pt-6 md:pb-4 md:pt-10 lg:pb-5">
             <div className="animate-rise-in max-w-3xl">
               <h1 className="name-level max-w-3xl text-primary">Gazi Jannatul Ferdous</h1>
-              <p className="mt-3 max-w-2xl text-sm italic leading-relaxed text-primary sm:mt-4 sm:text-base md:text-lg">Lecturer<br /><span className="text-xs sm:text-sm md:text-base">Department of Information and Communication Engineering</span><br /><span className="text-xs sm:text-sm md:text-base">Daffodil International University, Ashulia, Savar, Dhaka–1216</span></p>
+              <p className="mt-3 max-w-2xl text-sm italic leading-relaxed text-primary sm:mt-4 sm:text-base md:text-lg">Lecturer<br /><span className="text-xs sm:text-sm md:text-base">Department of Electrical and Electronic Engineering</span><br /><span className="text-xs sm:text-sm md:text-base">Daffodil International University, Ashulia, Savar, Dhaka–1216</span></p>
             </div>
           </div>
         </section>
@@ -222,7 +224,8 @@ export default function Home() {
           <div className="container grid gap-5 sm:gap-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-10">
             <div><h2 className="section-heading text-primary">Employment History</h2></div>
             <div className="employment-timeline">
-              <div className="employment-entry"><p className="mono-accent text-sm text-accent">2026 — Present</p><span className="employment-current-badge border border-accent/40 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-accent">Current</span><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Information and Communication Engineering<br />Daffodil International University, Bangladesh</p></div>
+              <div className="employment-entry"><p className="mono-accent text-sm text-accent">2026 — Present</p><span className="employment-current-badge border border-accent/40 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-accent">Current</span><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Electrical and Electronic Engineering<br />Daffodil International University, Bangladesh</p></div>
+              <div className="employment-entry"><p className="mono-accent text-sm text-accent">2026 — 2026</p><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Information and Communication Engineering<br />Daffodil International University, Bangladesh</p></div>
               <div className="employment-entry"><p className="mono-accent text-sm text-accent">2023 — 2025</p><h3 className="entry-title mt-4 text-primary">Lecturer</h3><p className="mt-2 text-sm leading-6 text-primary">Department of Electronics and Telecommunication Engineering<br />Chittagong University of Engineering and Technology, Bangladesh</p></div>
             </div>
           </div>
@@ -299,7 +302,7 @@ export default function Home() {
                   <MapPin className="contact-item-icon text-accent" aria-hidden="true" />
                   <div className="contact-item-content">
                     <p className="contact-label">Location</p>
-                    <p className="contact-value contact-location text-primary">Department of Information and Communication Engineering<br />Daffodil International University<br />Ashulia, Savar, Dhaka–1216</p>
+                    <p className="contact-value contact-location text-primary">Department of Electrical and Electronic Engineering<br />Daffodil International University<br />Ashulia, Savar, Dhaka–1216</p>
                   </div>
                 </div>
               </div>
